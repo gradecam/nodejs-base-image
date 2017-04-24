@@ -1,4 +1,4 @@
-h1. Small and Simplified Node.js Containers
+h1. Small and Simplified Node.js Containers w/ N|Solid
 
 A base image based off of the `nodesource/nsolid:alipne` image. Intended use is as a common base image for Node.js container images which are as small as possible. If your project requires modules which require compilation you will likely need to use a different image to build your container.
 
