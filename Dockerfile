@@ -1,10 +1,10 @@
 # Use the alpine image so we have the smallest image possible
-FROM nodesource/nsolid:alpine
+FROM nodesource/nsolid:carbon-latest
 
 # Create `app` group and user since the base nodesource image
 # doesn't currently.
-RUN addgroup -g 1000 app \
-    && adduser -G app -u 1000 -h /app -D app
+RUN addgroup --gid 1000 app \
+ && adduser --gid 1000 --uid 1000 --home /app --disabled-password app
 
 USER app
 WORKDIR /app
